@@ -93,9 +93,6 @@ main {
 }
 
 .carre-principale {
-    background-image: url("Galaxie.webp");
-    background-size: cover;
-    background-position: center;
     border-radius: 20px;
     margin: 2vh auto;
     width: 90%;
