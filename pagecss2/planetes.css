@@ -119,9 +119,6 @@ main {
   scrollbar-width: none; 
 }
 
-.planetes::-webkit-scrollbar {
-  display: none;
-}
 
 .planetes h2,
 .planetes img,
