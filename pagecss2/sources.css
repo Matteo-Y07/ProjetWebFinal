@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
@@ -14,7 +14,7 @@ body {
     font-family: 'Segoe UI', Roboto, sans-serif;
     color: #e0e0e0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* Organisation en colonne */
 }
 
 /* Header & Navigation */
@@ -84,7 +84,7 @@ main {
     flex: 1;
     padding-top: 100px;
 }
-
+/*Dimension du principales carré qui va contenir le textes*/
 .carre-principale {
     background-size: cover;
     background-position: center;
@@ -99,7 +99,7 @@ main {
     padding-top: 100px;
     padding-bottom: 100px;
 }
-
+/*Emplacement + police du texte contenu dans le carré principale*/
 .carre-principale-texte {
     background: linear-gradient(145deg, #333, #1a1a1a);
     border: 1px solid #444;
@@ -143,7 +143,7 @@ h3 {
 
 
 /*footer*/
-
+/*Style de notre bas de page*/
 footer {
     background: #000;
     padding: 40px;
