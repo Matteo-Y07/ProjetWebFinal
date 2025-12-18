@@ -142,8 +142,6 @@ main {
     color: white;
     font-family: "Polaris Space Font";
     font-size: 1.2rem;
-    border-style: solid;
-    border-color: #000000;
     text-shadow: -1px -1px 0 black,
                   1px -1px 0 black,
                  -1px  1px 0 black,
