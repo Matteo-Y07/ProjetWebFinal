@@ -111,27 +111,6 @@
       </div>
   </footer>
 
-  <?php
-  session_start();
-
-  // Définir le dossier CSS actif selon le dossier actuel de la page
-  // Ici tu détectes automatiquement si la page est dans pagecss2 ou pagecss
-  $css_folder = dirname($_SERVER['PHP_SELF']); // chemin relatif de la page
-  $css_folder = basename($css_folder); // juste le nom du dossier, ex: pagecss2
-
-  // Si un thème est déjà stocké en session, on l'utilise
-  if(!isset($_SESSION['theme'])) {
-    $_SESSION['theme'] = 'style.css'; // thème par défaut
-  }
-
-  // Si on appuie sur le bouton, on switch le thème
-  if(isset($_POST['switch_theme'])) {
-    $_SESSION['theme'] = ($_SESSION['theme'] == 'style.css') ? 'planetes.css' : 'style.css';
-  }
-
-  // On définit le CSS à inclure
-  $theme_file = $_SESSION['theme'];
-  ?>
 
 </body>
 
