@@ -94,7 +94,7 @@ main {
     width: 90%;
     padding-top: 90px;
 }
-
+/* classe pour les div représentant chaque planètes*/
 .planetes {
   display: flex;
   overflow-x: auto;         /* Permet le défilement horizontal */
@@ -193,7 +193,7 @@ footer {
     color: #666;
 }
 
-
+/* différents id permettant de préciser la couleur de chaque div composant les planètes + la couleur des ombres les entourants*/
 @media (max-width: 700px) {
 
     .navbar {
