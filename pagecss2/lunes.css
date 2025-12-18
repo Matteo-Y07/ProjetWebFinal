@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
@@ -11,14 +11,15 @@ html, body {
 body {
     background: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
     background-attachment: fixed;
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif; /* Police de texte*/
     color: #e0e0e0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organisation en colonne */
 }
 
 /* Header & Navigation */
 
+/* classe de la barre de navigation*/
 .navbar {
     position: fixed;
     top: 0;
@@ -34,6 +35,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* classe pour le logo et le titre du site*/
 .accueil {
     display: flex;
     align-items: center;
@@ -42,17 +44,19 @@ body {
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
+/* classe pour le titre du site*/
 .accueil h1 {
     font-size: 1.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
 
+/* classe pour les onglets accueil*/
 .menu {
     display: flex;
     gap: 20px;
 }
-
+/* classe pour les liens menant au différentes pages */
 .menu-item {
     color: #aaa;
     text-decoration: none;
@@ -83,7 +87,7 @@ main {
     flex: 1;
     padding-bottom: 30px;
 }
-
+/* classe pour l'ensemble des div composant les lunes et leur placements*/
 .lunesensemble {
     display: flex;
     flex-wrap: wrap;
@@ -93,7 +97,7 @@ main {
     width: 90%;
     padding-top: 90px;
 }
-
+/* classe pour les div représentant chaque lunes*/
 .lunes {
     width: clamp(300px, 25vw, 600px);
     height: clamp(300px, 25vw, 600px);
@@ -151,7 +155,7 @@ main {
     font-size: 1.5rem;
 }
 
-
+/* différents id permettant de préciser la couleur de chaque div composant les planètes + la couleur des ombres les entourants*/
 #carreGanymede{
     background: linear-gradient(to bottom, #766E69, #DCCEC4);
     box-shadow: 0px 0px 20px 10px #766E69;
@@ -205,7 +209,7 @@ footer {
     color: #666;
 }
 
-
+/*permet de aux éléments qui en ont besoin de s'adapter au format mobile*/
 @media (max-width: 700px) {
 
     .navbar {
