@@ -1,56 +1,44 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 0; /* Supprime les marges par défaut */
 }
 
 body {
-    background: #09227d;
-    background: linear-gradient(30deg, rgba(9, 34, 125, 1) 0%, rgba(94, 55, 145, 1) 50%, rgba(167, 128, 224, 1) 100%);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    background: linear-gradient(30deg, rgba(9, 34, 125, 1) 0%, rgba(94, 55, 145, 1) 50%, rgba(167, 128, 224, 1) 100%); 
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif; /* Police de texte*/
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organisation en colonne */
 }
 
-/*header*/
 
 .navbar {
-    position: fixed;
+    position: fixed; /
     top: 0;
     left: 0;
-    background-color: #02056a;
+    background-color: #02056a; 
     display: flex;
-    justify-content: space-between;
-    z-index: 1000;
+    justify-content: space-between; 
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 15px 0;
     box-shadow: 10px 3px 9px black;
 }
 
 .accueil {
     display: flex;
-    gap: 15px;
+    gap: 15px; 
     color: white;
     font-weight: bold;
-    justify-content: flex-start;
     padding-left: 10px;
-}
-
-.accueil h1 {
-    font-size: 1.3rem;
-    padding-top: 0px;
 }
 
 .menu {
     display: flex;
-    gap: 5px;
+    gap: 5px; 
     font-size: 1.3rem;
     padding-right: 10px;
 }
@@ -59,237 +47,137 @@ body {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    padding: 4px 8px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    /* border-radius: 10px; */
-    transition: 0.3s;
+    transition: 0.3s; 
 }
 
 .menu-item:hover {
-    background-color: #00bfff;
-    box-shadow:
-        0 0 5px #0ff,
-        0 0 15px #0ff,
-        0 0 30px #0ff;
+    background-color: #00bfff; 
+    box-shadow: 0 0 30px #0ff; 
 }
 
 #toggle-style {
-  padding: 0;
   border: none;
   background: none;
-  transition: 0.3s;
 }
 
 #toggle-style:hover {
-  transform: scale(1.5);
+  transform: scale(1.5); /* Bouton qui grossit */
 }
 
-/*main*/
-
+/* MAIN */
 main {
     flex: 1;
-    padding-top: 100px;
+    padding-top: 100px; /* Décale sous la navbar */
 }
 
 .carre-principale {
     position: relative;
-    overflow: hidden;
-    margin-top: 10vh;
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    width: clamp(300px, 80vw, 2048px);
-    height: clamp(500px, 60vh, 700px);
     margin: auto;
-    gap: 15px;
+    border-radius: 20px; /* Coins arrondis */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .carre-bg {
-  display:block;
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 0;
-}
-
-.carre-principale-texte {
-    display: flex;
-    flex-direction: column;
-    gap: 5vh
 }
 
 .carre-principale h2 {
     color: white;
-    font-size: 2rem;
-    text-align: center;
-    text-decoration: underline;
+    text-decoration: underline; /* Titre souligné */
 }
 
 h3 {
     color: white;
-    font-size: 1.6rem;
-    text-align: center;
+    text-align: center; /* Sous-titre centré */
 }
 
-.video-section,
-.carre-principale-texte {
-  display: flex;
-  padding: 20px;
-  background: linear-gradient(to bottom right, purple, darkblue);
-  height: 80%;
-  width: clamp(280px, 80%, 900px);  
+/* Style de la vidéo */
+.video-section {
+  background: linear-gradient(to bottom right, purple, darkblue); 
   border-radius: 15px;
-  text-align: center; 
-  z-index: 1;
-  opacity: 0.8;
-  border: 2px solid black;
+  opacity: 0.8; /* Transparent */
+  padding: 20px;
 }
-
 
 .video-section video {
-  width: 100%;                   
-  height: auto;                  
+  width: 100%; /* Vidéo qui prend toute la largeur */
   border-radius: 10px;
-  z-index: 2;
 }
 
-/*animation pour box shadow*/
-
+/* Animation des ombrages*/
 @keyframes shadows {
-  0% {
-    box-shadow: 0 0 10px #48abe0;
-  }
-  50% {
-    box-shadow: 0 0 20px blueviolet;
-  }
-  100% {
-    box-shadow: 0 0 10px #48abe0;
-  }
+  0% { box-shadow: 0 0 10px #48abe0; }
+  50% { box-shadow: 0 0 20px blueviolet; }
+  100% { box-shadow: 0 0 10px #48abe0; }
+
 }
-/* petit carres */
+
+/* Style des carrés secondaires */
 .carre-secondaire {
-    border-style: solid;
-    border-color: black;
-    width: clamp(150px, 20vw, 800px);
-    height: clamp(150px, 15vh, 400px);
-    padding: 15px;
+    border-radius: 15px;
+    background-color: #303366;
+    box-shadow: 0px 0px 20px 10px #48abe0; 
+    animation: shadows 1.5s infinite; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;  
-    border-radius: 15px;
-    border-width: thick;
-    background-color: #303366;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0px 0px 20px 10px #48abe0;
-    animation: shadows 1.5s infinite;
-    gap: 20px;
-}
-
-.carre-secondaire h2 {
-    margin: 0;
-    color: white;
-    font-size: 1.3rem;
-}
-
-.carre-secondaire p {
-    margin: 0;
-    color: white;
-    font-size: 1.1rem;
 }
 
 .carre-secondaires {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* S’adapte en plusieurs lignes */
     gap: 20px;
     justify-content: center;
-    margin: 50px auto;
-    /* width: 90%; */
 }
 
+/* Style du formulaire */
 .formulaire {
-  width: 90%;
-  max-width: 600px;
+  background-color: #090c52; 
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px 10px #10567A; 
+  color: white;
   margin: 40px auto;
   padding: 20px;
-  background-color: #090c52;
-  color: white;
-  border-radius: 15px;
-  box-shadow: 0px 0px 20px 10px #10567A;
 }
 
-.formulaire h2 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.formulaire label {
-  display: flex;
-  margin: 10px 0 5px;
-}
-
-.formulaire input,
-.formulaire textarea,
-.formulaire select {
+.formulaire input, .formulaire textarea, .formulaire select {
+  border-radius: 8px; 
   width: 100%;
   padding: 10px;
-  border-radius: 8px;
-  border: none;
-  margin-bottom: 15px;
-}
-
-.checkbox {
-  margin-bottom: 15px;
 }
 
 .formulaire button {
-  background-color: #10567A;
+  background-color: #10567A; 
+  border-radius: 10px;
+  cursor: pointer;
   color: white;
   font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer; 
 }
 
 .formulaire button:hover {
-  background-color: #1e90ff;
-     box-shadow:
-        0 0 5px #0ff,
-        0 0 15px #0ff,
-        0 0 30px #0ff;
-}
+  background-color: #1e90ff; 
+  box-shadow: 0 0 30px #0ff; 
 
-/*footer*/
-
+/*Style de notre bas de page*/
 footer {
-    background: #090c52;
-    height: 50px;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5vw;
+    background: #090c52; 
     color: white;
-}
-
-.logoinsta {
-    justify-content: space-between;
-
+    display: flex;
+    justify-content: center; /* On le centre */
+    gap: 5vw;
+    padding: 1rem;
 }
 
 .logoinsta img {
-    width: 30px; 
-    height: 30px;
-
+    width: 30px; height: 30px; /* Taille du logo Instagram */
 }
+
 
 
 @media (max-width: 700px) {
