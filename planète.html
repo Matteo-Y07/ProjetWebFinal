@@ -1,89 +1,110 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr"> 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Page présentant les 8 planètes qui composent le système solaire.">
-    <title>Planètes | Planetaria</title>
-    <link rel="icon" href="pagecss/favicon.svg">
-    <link id="theme" rel="stylesheet" href="pagecss/planetes.css">
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="description" content="Page présentant les 8 planètes qui composent le système solaire."> 
+    <title>Planètes | Planetaria</title> <!-- Titre de l’onglet -->
+    <link rel="icon" href="pagecss/favicon.svg">   <!-- Notre Favicon -->
+    <link id="theme" rel="stylesheet" href="pagecss/planetes.css"> <!-- Feuille de style spécifique à la page Planète -->
+    
     <script src="theme.js" defer></script>
 </head>
 <body>
   
+    <!-- Barre de navigation -->
     <header class="navbar">
-    <div class="accueil">
-    <img src="pagecss/favicon.svg" alt="logo du site"><h1>PLANETARIA</h1>
-    </div>
-    <button id="toggle-style"><img src="pagecss/Etoile.png" alt="Theme lune" width="50" height="50"></button>
+      <div class="accueil">
+        <img src="pagecss/favicon.svg" alt="logo du site">
+        <h1>PLANETARIA</h1>
+      </div>
+      <button id="toggle-style">
+        <img src="pagecss/Etoile.png" alt="Theme lune" width="50" height="50">
+      </button>
 
-    <nav class="menu">
-      <a href="index.html" class="menu-item">Accueil</a>
-      <a href="planète.html" class="menu-item"><u>Planètes</u></a>
-      <a href="lunes.html" class="menu-item">Lunes</a>
-      <a href="sources.html" class="menu-item">Sources</a>
-    </nav>
+      <!-- Menu de navigation -->
+      <nav class="menu">
+        <a href="index.html" class="menu-item">Accueil</a>
+        <a href="planète.html" class="menu-item"><u>Planètes</u></a>
+        <a href="lunes.html" class="menu-item">Lunes</a>
+        <a href="sources.html" class="menu-item">Sources</a>
+      </nav>
     </header>
 
+    <!-- Contenu principal -->
     <main class="planetesensemble">
 
-        <div id =carreMercure class="planetes">
+        <!-- Présentation de chaque planète de notre système solaire dans chaque div -->
+        <div id="carreMercure" class="planetes">
           <h2>Mercure</h2>
           <img src="planeteimage/Mercure.webp" alt="Mercure">  
-          <p>Mercure est la plus petite planète du système solaire et la plus proche du Soleil. Elle a la particularité de ne pas de lunes.Elle tourne autour du Soleil en seulement 88 jours et va à de grandes températures allant de –180 °C à +430 °C.</p>
+          <p>Mercure est la plus petite planète du système solaire et la plus proche du Soleil. 
+          Elle a la particularité de ne pas avoir de lunes. 
+          Elle tourne autour du Soleil en seulement 88 jours et connaît des températures extrêmes allant de –180 °C à +430 °C.</p>
         </div>
 
-        <div id =carreVenus class="planetes">
-          <h2>Venus</h2>
+        <div id="carreVenus" class="planetes">
+          <h2>Vénus</h2>
           <img src="planeteimage/Venus.webp" alt="Venus">  
-          <p>Vénus est une planète ayant presque de la taille de la Terre mais recouverte d’une atmosphère très dense de dioxyde de carbone le caractérisant.Elle est la planète la plus chaude du système solaire, avec plus de 460 °C en surface, à cause d’un effet de serre assez important.</p>
+          <p>Vénus est presque de la taille de la Terre mais recouverte d’une atmosphère très dense de dioxyde de carbone. 
+          Elle est la planète la plus chaude du système solaire, avec plus de 460 °C en surface, à cause d’un effet de serre intense.</p>
         </div>
 
-        <div id =carreTerre class="planetes">
+        <div id="carreTerre" class="planetes">
           <h2>Terre</h2>
           <img src="planeteimage/Terre.webp" alt="Terre">  
-          <p>La Terre est la seule planète connue pour abriter la vie ainsi que la planète et nous vivons. Elle possède une atmosphère riche en oxygène, de l’eau liquide en abondance et un satellite naturel : la Lune.</p>
+          <p>La Terre est la seule planète connue pour abriter la vie. 
+          Elle possède une atmosphère riche en oxygène, de l’eau liquide en abondance et un satellite naturel : la Lune.</p>
         </div>
 
-        <div id =carreMars class="planetes">
+        <div id="carreMars" class="planetes">
           <h2>Mars</h2>
           <img src="planeteimage/Mars.webp" alt="Mars"> 
-          <p>Mars est une planète rocheuse plus petite que la Terre. Elle est froide et sèche, avec des calottes polaires de glace et des paysages désertiques. Elle intrigue les scientifiques car elle a pu abriter de l’eau liquide dans le passé et pourrait être une future planète habitable.</p>
+          <p>Mars est une planète rocheuse plus petite que la Terre. 
+          Elle est froide et sèche, avec des calottes polaires de glace et des paysages désertiques. 
+          Elle intrigue les scientifiques car elle a pu abriter de l’eau liquide dans le passé et pourrait être une future planète habitable.</p>
         </div>
 
-        <div id =carreJupiter class="planetes">
+        <div id="carreJupiter" class="planetes">
           <h2>Jupiter</h2>
           <img src="planeteimage/jupiter.webp" alt="Jupiter">
-          <p>Jupiter est la plus grande planète du système solaire, une géante gazeuse. Elle possède une énorme tache rouge et plus de 90 lunes, dont Ganymède, la plus grande lune du système solaire.</p>
+          <p>Jupiter est la plus grande planète du système solaire, une géante gazeuse. 
+          Elle possède une énorme tache rouge et plus de 90 lunes, dont Ganymède, la plus grande lune du système solaire.</p>
         </div>
 
-        <div id =carreSaturne class="planetes">
+        <div id="carreSaturne" class="planetes">
           <h2>Saturne</h2>
           <img src="planeteimage/saturne.webp" alt="Saturne">
-          <p>Saturne est célèbre pour ses anneaux spectaculaires faits de glace et de poussière. C’est une géante gazeuse avec de nombreuses lunes, dont Titan, qui possède une atmosphère assez dense.</p>
+          <p>Saturne est célèbre pour ses anneaux spectaculaires faits de glace et de poussière. 
+          C’est une géante gazeuse avec de nombreuses lunes, dont Titan, qui possède une atmosphère dense.</p>
         </div>
 
-        <div id =carreUranus class="planetes">
+        <div id="carreUranus" class="planetes">
           <h2>Uranus</h2>
           <img src="planeteimage/uranus.webp" alt="Uranus">
-          <p>Uranus est une géante glacée, bleue‑verte à cause du méthane dans son atmosphère. Elle est particulière car elle est inclinée sur le côté, ce qui lui donne des saisons variées et extrêmes.</p>
+          <p>Uranus est une géante glacée, bleue‑verte à cause du méthane dans son atmosphère. 
+          Elle est particulière car elle est inclinée sur le côté, ce qui lui donne des saisons variées et extrêmes.</p>
         </div>
 
-        <div id =carreNeptune class="planetes">
+        <div id="carreNeptune" class="planetes">
           <h2>Neptune</h2>
           <img src="planeteimage/neptune.webp" alt="Neptune">
-          <p>Neptune est la planète la plus éloignée du Soleil. C’est une géante glacée bleue, avec des vents très violents et une grande tache sombre. Elle possède aussi de nombreuses lunes, dont Triton.</p>
+          <p>Neptune est la planète la plus éloignée du Soleil. 
+          C’est une géante glacée bleue, avec des vents très violents et une grande tache sombre. 
+          Elle possède aussi de nombreuses lunes, dont Triton.</p>
         </div>
 
-      </main>
+    </main>
       
-  <footer class="footer"><p>Tout droits réservés</p>
-      <div class=logoinsta>
-      <a href="https://www.instagram.com/planetariawebsite/" title="logo vers compte instagram" target="_blank">
-	  <img alt="logo d'instagram" src="logo-instagram.webp" width="15" height="15" >
-      </a>
+    <!-- Pied de page avec notre réseau social -->
+    <footer class="footer">
+      <p>Tous droits réservés</p> 
+      <div class="logoinsta">
+        <a href="https://www.instagram.com/planetariawebsite/" title="logo vers compte instagram" target="_blank">
+          <img alt="logo d'instagram" src="logo-instagram.webp" width="15" height="15">
+        </a>
       </div>
-  </footer>
+    </footer>
     
 </body>
 </html>
