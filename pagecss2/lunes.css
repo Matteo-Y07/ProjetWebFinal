@@ -87,7 +87,7 @@ main {
     flex: 1;
     padding-bottom: 30px;
 }
-/* classe pour l'ensemble des div composant les lunes et leur placements*/
+/* classe pour l'ensemble des div composant les lunes et leur placements sur la page*/
 .lunesensemble {
     display: flex;
     flex-wrap: wrap;
