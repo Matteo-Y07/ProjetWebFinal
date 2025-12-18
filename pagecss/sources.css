@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    /* background-image: url("paysage-nocturne-magique-avec-des-lumieres-scintillantes.jpg"); */
+    background: #09227d;
+    background: radial-gradient(circle at center, #9154ca 0%, #410a61 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+/*header*/
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgb(2, 5, 106, 0.8);    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 10px 3px 9px black;
+}
+
+.accueil {
+    display: flex;
+    gap: 15px;
+    color: white;
+    font-weight: bold;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.accueil h1 {
+    font-size: 1.3rem;
+    padding-top: 0px;
+}
+
+.menu {
+    display: flex;
+    gap: 5px;
+    font-size: 1.3rem;
+    padding-right: 10px;
+}
+
+.menu-item {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 4px 8px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    /* border-radius: 10px; */
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #00bfff;
+    box-shadow:
+        0 0 5px #0ff,
+        0 0 15px #0ff,
+        0 0 30px #0ff;
+}
+
+#toggle-style {
+  padding: 0;
+  border: none;
+  background: none;
+  transition: 0.3s;
+}
+
+#toggle-style:hover {
+  transform: rotate(180deg) scale(1.2);
+}
+
+/*main*/
+
+main {
+    flex: 1;
+    padding-top: 100px;
+}
+
+.carre-principale {
+    background-image: url("Galaxie.webp");
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 2vh auto;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.carre-principale-texte {
+    background-color: rgba(48, 51, 102, 0.9);
+    backdrop-filter: blur(8px);
+    width: 90%;
+    padding: 20px;
+    opacity: 0.8;
+    border-radius: 20px;
+    font-size: clamp(8px, 1vw, 12px);
+    color: white;
+}
+
+.carre-principale h2 {
+    color: white;
+    font-size: clamp(24px, 4vw, 48px);
+    text-align: center;
+    text-decoration: underline;
+}
+
+h3 {
+    color: white;
+    font-size: clamp(16px, 2vw, 24px);
+    text-align: left;
+}
+
+.carre-principale ul{
+    font-size: clamp(14px, 3vw, 18px);
+    color: white;
+}
+
+.carre-principale a{
+    color: white;
+}
+
+
+/*animation pour box shadow*/
+
+@keyframes shadows {
+  0% {
+    box-shadow: 0 0 10px #48abe0;
+  }
+  50% {
+    box-shadow: 0 0 20px blueviolet;
+  }
+  100% {
+    box-shadow: 0 0 10px #48abe0;
+  }
+}
+
+
+/*footer*/
+
+footer {
+    background: #090c52;
+    height: 50px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+    color: white;
+}
+
+.logoinsta {
+    justify-content: space-between;
+
+}
+
+.logoinsta img {
+    width: 30px; 
+    height: 30px;
+
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .accueil {
+            flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .carre-principale {
+        margin-top: 130px;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+}
