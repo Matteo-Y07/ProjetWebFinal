@@ -203,7 +203,19 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5vw;
     color: white;
+}
+
+.logoinsta {
+    justify-content: space-between;
+
+}
+
+.logoinsta img {
+    width: 30px; 
+    height: 30px;
+
 }
 
 
