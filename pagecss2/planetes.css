@@ -104,59 +104,52 @@ main {
 }
 
 .planetes {
-    border-style: solid;
-    border-color: black;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;   
-    align-items: center;      
-    justify-content: center;  
-    border-radius: 15%;
-    border-width: thick;
-    background-color: #303366;
-    position: relative;
-    overflow: hidden;
-    animation: shadows 1.5s infinite;
-    gap: 30px;     
-    border-style : solid;
+  display: flex;
+  overflow-x: auto;         /* Permet le défilement horizontal */
+  scroll-snap-type: x mandatory; /* Force l'arrêt sur chaque élément */
+  scroll-behavior: smooth;  /* Animation fluide */
+  
+  width: 100%;              /* Prend toute la largeur disponible */
+  max-width: 600px;         /* Limite la taille pour le confort visuel */
+  margin: 0 auto;           /* Centre le bloc dans la page */
+  border: 2px solid #333;
+  border-radius: 15px;
+  background: #000;      
+  
+  scrollbar-width: none; 
 }
 
+.planetes::-webkit-scrollbar {
+  display: none;
+}
 
-
-
+.planetes h2,
+.planetes img,
+.planetes p {
+  flex: 0 0 100%;           /* Largeur fixe à 100% du parent */
+  width: 100%;
+  height: 400px;            /* Hauteur fixe pour que tout soit aligné */
+  margin: 0;
+  display: flex;
+  align-items: center;      /* Centre verticalement */
+  justify-content: center;  /* Centre horizontalement */
+  scroll-snap-align: start; /* S'aimante parfaitement au bord */
+  color: white;
+  box-sizing: border-box;
+  padding: 40px;
+}
 
 .planetes img {
-    height:  90px;
-    width:  90px;
-    position: absolute;
-    top: 55px;
-    right: 6px;
+  object-fit: contain;      /* L'image s'adapte sans être rognée */
+  padding: 0;               /* On enlève le padding pour l'image */
 }
 
-.planetes p {
-    position: absolute;
-    bottom: 7px;
-    left: 8px;   
-    text-align: center;
-    color: white;
-    font-family: "Polaris Space Font";
-    font-size: clamp(0.5rem, 20px, 1.5rem);
-    text-shadow: -1px -1px 0 black,
-                  1px -1px 0 black,
-                 -1px  1px 0 black,
-                  1px  1px 0 black;
-}
-
+/* Optionnel : Un petit effet de style pour le texte */
 .planetes h2 {
-    position: absolute;
-    left: 40px;
-    top: -10.5px;
-    color: white;
-    font-family: "Polaris Space Font";
-    font-size: clamp(0.5rem, 26.5px, 5rem);
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
 }
-
 
 /* Page principale */
 
@@ -191,11 +184,6 @@ main {
     box-shadow: 0px 0px 20px 10px #D7DFCE;
 }
 
-#carreSaturne img{
-    height: 80px;
-    width: 160px;
-}
-
 #carreUranus{
     background: linear-gradient(to bottom, #10E8E8, #0B4E78);
     box-shadow: 0px 0px 20px 10px #10E8E8;
@@ -215,19 +203,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vw;
     color: white;
-}
-
-.logoinsta {
-    justify-content: space-between;
-
-}
-
-.logoinsta img {
-    width: 30px; 
-    height: 30px;
-
 }
 
 
