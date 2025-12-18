@@ -1,10 +1,10 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 0; /* Supprime les marges par défaut */
 }
 
 body {
@@ -14,9 +14,9 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Police de texte*/
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Organisation en colonne */
 }
 
 /*header*/
@@ -88,11 +88,14 @@ body {
 
 /*main*/
 
+
+/* Contenu principal */
+
 main {
     flex: 1;
     padding-top: 100px;
 }
-
+/*Dimension de nos images et divs pour insérer les sources*/
 .carre-principale {
     background-image: url("Galaxie.webp");
     background-size: cover;
@@ -143,7 +146,7 @@ h3 {
 }
 
 
-/*animation pour box shadow*/
+
 
 @keyframes shadows {
   0% {
@@ -158,7 +161,7 @@ h3 {
 }
 
 
-/*footer*/
+/*Style de notre bas de page*/
 
 footer {
     background: #090c52;
