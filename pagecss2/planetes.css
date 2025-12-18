@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
@@ -18,7 +18,7 @@ body {
 }
 
 /* Header & Navigation */
-
+/* classe de la barre de navigation*/
 .navbar {
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body {
     padding: 10px 30px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-
+/* classe pour le logo et le titre du site*/
 .accueil {
     display: flex;
     align-items: center;
@@ -41,18 +41,18 @@ body {
     color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
-
+/* classe pour le titre du site*/
 .accueil h1 {
     font-size: 1.5rem;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
-
+/* classe pour les onglets accueil*/
 .menu {
     display: flex;
     gap: 20px;
 }
-
+/* classe pour les liens menant au différentes pages */
 .menu-item {
     color: #aaa;
     text-decoration: none;
@@ -84,7 +84,7 @@ main {
     flex: 1;
     padding-bottom: 30px;
 }
-
+/* classe pour l'ensemble des div composant les planètes et leur placements sur la page*/
 .planetesensemble {
     display: flex;
     flex-wrap: wrap;
