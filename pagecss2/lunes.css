@@ -228,13 +228,25 @@ main {
 /*footer*/
 
 footer {
-    background: #090c52;
+    background: #000000;
     height: 50px;
     padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 5vw;
     color: white;
+}
+
+.logoinsta {
+    justify-content: space-between;
+
+}
+
+.logoinsta img {
+    width: 30px; 
+    height: 30px;
+
 }
 
 
