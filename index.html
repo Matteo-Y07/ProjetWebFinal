@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Site présentant le système solaire en son ensemble.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siteplanete</title>
+    <link rel="icon" href="pagecss/favicon.svg">
+    <link rel="preload" as="image" href="/pagecss/Galaxie.webp">
+    <link id="theme" rel="stylesheet" href="pagecss/style.css">
+    <script src="theme.js" defer></script>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="accueil">
+      <img src="pagecss/favicon.svg" alt="logo du site">
+      <h1>PLANETARIA</h1>
+    </div>
+    <button id="toggle-style"><img src="pagecss/Etoile.png" alt="Theme lune" width="50px" height="50px"></button>
+
+    <nav class="menu">
+      <a href="planète.html" class="menu-item">Planètes</a>
+      <a href="lunes.html" class="menu-item">Lunes</a>
+      <a href="sources.html" class="menu-item">Sources</a>
+    </nav>
+  </header>
+
+  <main class="body-carres">
+
+    <section class="carre-principale">
+      <img
+        src="pagecss/Galaxie.webp"
+        alt="Fond etoiles"
+        class="carre-bg"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async">
+
+      <div class="carre-principale-texte">
+        <h2>BIENVENUE SUR PLANETARIA</h2>
+        <h3>Un site complet, qui vous apprendra plein de choses sur notre système solaire !</h3>
+      </div>
+      
+      <div class="video-section">
+        <video controls preload="metadata">
+          <source src="systemesolaire.mp4" type="video/mp4">
+          <track src="pagecss/soustitresfr.vtt" kind="captions" srclang="fr" label="Français" default>
+          <track src="pagecss/soustitresen.vtt" kind="captions" srclang="en" label="Anglais">
+        </video>
+      </div>
+      </section>
+
+      <div class="carre-secondaires">
+
+        <div class="carre-secondaire">
+          <h2>Nombre de planètes</h2>
+          <p>8 planètes</p>
+        </div>
+
+        <div class="carre-secondaire">
+          <h2>Nombre de lunes</h2>
+          <p>+220 lunes</p>
+        </div>
+
+        <div class="carre-secondaire">
+          <h2>Âge</h2>
+          <p>4,6 × 10⁹ ans</p>
+        </div>
+
+        <div class="carre-secondaire">
+          <h2>Système le plus proche</h2>
+          <p>Proxima Centauri</p>
+        </div>
+
+      </div>
+
+  </main>
+
+   <div class="formulaire">
+  <h2>Contactez-nous</h2>
+  <form action="https://formspree.io/f/xkgdlzvy" method="POST">
+    
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" placeholder="Votre email" required>
+
+    <label for="sujet">Sujet :</label>
+    <select id="sujet" name="sujet" required>
+      <option value="">-- Choisissez un sujet --</option>
+      <option value="planetes">Planètes</option>
+      <option value="lunes">Lunes</option>
+      <option value="autre">Autre</option>
+    </select>
+
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+
+
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+  <footer class="footer"><p>Tout droits réservés</p>
+  </footer>
+
+  <?php
+  session_start();
+
+  // Définir le dossier CSS actif selon le dossier actuel de la page
+  // Ici tu détectes automatiquement si la page est dans pagecss2 ou pagecss
+  $css_folder = dirname($_SERVER['PHP_SELF']); // chemin relatif de la page
+  $css_folder = basename($css_folder); // juste le nom du dossier, ex: pagecss2
+
+  // Si un thème est déjà stocké en session, on l'utilise
+  if(!isset($_SESSION['theme'])) {
+    $_SESSION['theme'] = 'style.css'; // thème par défaut
+  }
+
+  // Si on appuie sur le bouton, on switch le thème
+  if(isset($_POST['switch_theme'])) {
+    $_SESSION['theme'] = ($_SESSION['theme'] == 'style.css') ? 'planetes.css' : 'style.css';
+  }
+
+  // On définit le CSS à inclure
+  $theme_file = $_SESSION['theme'];
+  ?>
+
+</body>
+
+</html>
