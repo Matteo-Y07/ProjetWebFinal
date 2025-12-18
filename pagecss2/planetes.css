@@ -1,20 +1,20 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;/* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
     height: 100%;
     margin: 0;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;/* Supprime les marges par défaut */
 }
 
 body {
     background: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
     background-attachment: fixed;
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;/* Police de texte*/
     color: #e0e0e0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* Organisation en colonne */
 }
 
 /* Header & Navigation */
@@ -79,7 +79,7 @@ body {
     transform: rotate(180deg) scale(1.2);
 }
 /*main*/
-
+/*Contenu principal*/
 main {
     flex: 1;
     padding-bottom: 30px;
@@ -94,7 +94,7 @@ main {
     width: 90%;
     padding-top: 90px;
 }
-
+/*Dimension de nos planètes */
 .planetes {
   display: flex;
   overflow-x: auto;         /* Permet le défilement horizontal */
@@ -111,7 +111,7 @@ main {
   scrollbar-width: none; 
 }
 
-
+/* Style de nos images/titre/paragraphe de planète*/
 .planetes h2,
 .planetes img,
 .planetes p {
@@ -140,7 +140,7 @@ main {
   letter-spacing: 5px;
 }
 
-/* Page principale */
+/* Style de nos planètes */
 
 #carreMercure{
     background: linear-gradient(to bottom, #B9723F, #c94f04);
@@ -184,7 +184,7 @@ main {
 }
 
 /*footer*/
-
+/*Style de notre bas de page*/
 footer {
     background: #000;
     padding: 40px;
