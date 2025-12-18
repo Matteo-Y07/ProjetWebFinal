@@ -1,20 +1,20 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box;/* Tous les éléments calculent leur taille avec bordures et marges incluses */
 }
 
 html, body {
     height: 100%;
-    margin: 0;
+    margin: 0;/* Supprime les marges par défaut */
     scroll-behavior: smooth;
 }
 
 body {
     background: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
     background-attachment: fixed;
-    font-family: 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;/* Police de texte*/
     color: #e0e0e0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;/* Police de texte*/
 }
 
 /* Header & Navigation */
@@ -79,6 +79,7 @@ body {
     transform: rotate(180deg) scale(1.2);
 }
 /*main*/
+/* Contenu principal */
 main {
     flex: 1;
     padding-bottom: 30px;
@@ -93,7 +94,7 @@ main {
     width: 90%;
     padding-top: 90px;
 }
-
+/*Dimension de nos lunes */
 .lunes {
     width: clamp(300px, 25vw, 600px);
     height: clamp(300px, 25vw, 600px);
@@ -108,14 +109,14 @@ main {
     gap: 0px;     
     transition: 0.4s;
 }
-
+/*Dimension de nos images de lunes*/
 .lunes img {
     visibility: visible;
     width:  120%;
     aspect-ratio: auto;
     padding-top: 50px;
 }
-
+/* Style de notre texte sur nos lunes */
 .lunes p {
     visibility: hidden;
     text-align: center;
@@ -151,7 +152,7 @@ main {
     font-size: 1.5rem;
 }
 
-
+/* Style de nos lunes */
 #carreGanymede{
     background: linear-gradient(to bottom, #766E69, #DCCEC4);
     box-shadow: 0px 0px 20px 10px #766E69;
@@ -196,7 +197,7 @@ main {
 
 
 /*footer*/
-
+/*Style de notre bas de page*/
 footer {
     background: #000;
     padding: 40px;
