@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: radial-gradient(circle at center, #2c2c2c 0%, #000000 100%);
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Navigation */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accueil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.accueil h1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.4s ease;
+    border-radius: 5px;
+}
+
+.menu-item:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+#toggle-style {
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: transform 0.3s;
+}
+
+#toggle-style:hover {
+    transform: rotate(180deg) scale(1.2);
+}
+/*main*/
+
+main {
+    flex: 1;
+    padding-bottom: 30px;
+}
+
+.planetesensemble {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    padding-top: 90px;
+}
+
+.planetes {
+  display: flex;
+  overflow-x: auto;         /* Permet le défilement horizontal */
+  scroll-snap-type: x mandatory; /* Force l'arrêt sur chaque élément */
+  scroll-behavior: smooth;  /* Animation fluide */
+  
+  width: 100%;              /* Prend toute la largeur disponible */
+  max-width: 600px;         /* Limite la taille pour le confort visuel */
+  margin: 0 auto;           /* Centre le bloc dans la page */
+  border: 2px solid #333;
+  border-radius: 15px;
+  background: #000;      
+  
+  scrollbar-width: none; 
+}
+
+
+.planetes h2,
+.planetes img,
+.planetes p {
+  flex: 0 0 100%;           /* Largeur fixe à 100% du parent */
+  width: 100%;
+  height: 400px;            /* Hauteur fixe pour que tout soit aligné */
+  margin: 0;
+  display: flex;
+  align-items: center;      /* Centre verticalement */
+  justify-content: center;  /* Centre horizontalement */
+  scroll-snap-align: start; /* S'aimante parfaitement au bord */
+  color: white;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.planetes img {
+  object-fit: contain;      /* L'image s'adapte sans être rognée */
+  padding: 0;               /* On enlève le padding pour l'image */
+}
+
+/* Optionnel : Un petit effet de style pour le texte */
+.planetes h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+/* Page principale */
+
+#carreMercure{
+    background: linear-gradient(to bottom, #B9723F, #c94f04);
+    box-shadow: 0px 0px 20px 10px #B9723F;
+}
+
+#carreVenus{
+    background: linear-gradient(to bottom, #DE9542, #785124);
+    box-shadow: 0px 0px 20px 10px #DE9542;
+}
+
+#carreTerre{
+    background: linear-gradient(to bottom, #3E70DB, #213C75);
+    box-shadow: 0px 0px 20px 10px #3E70DB;
+    
+}
+
+#carreMars{
+    background: linear-gradient(to bottom, #F96F0C, #934107);
+    box-shadow: 0px 0px 20px 10px #F96F0C;
+}
+
+#carreJupiter{
+    background: linear-gradient(to bottom, #B49D9D, #4E4444);
+    box-shadow: 0px 0px 20px 10px #B49D9D;
+}
+
+#carreSaturne{
+    background: linear-gradient(to bottom, #D7DFCE, #757970);
+    box-shadow: 0px 0px 20px 10px #D7DFCE;
+}
+
+#carreUranus{
+    background: linear-gradient(to bottom, #10E8E8, #0B4E78);
+    box-shadow: 0px 0px 20px 10px #10E8E8;
+}
+
+#carreNeptune{
+    background: linear-gradient(to bottom, #4DDEFF, #082C63);
+    box-shadow: 0px 0px 20px 10px #4DDEFF;
+}
+
+/*footer*/
+
+footer {
+    background: #000;
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #222;
+    color: #666;
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .accueil {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .accueil img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .planetesensemble {
+        margin-top: 170px;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+}
